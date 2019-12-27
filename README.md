@@ -32,26 +32,41 @@ If you use TypeScript, use the following code instead:
 import { waitForSignals } from 'wait-for-signals';
 ```
 
-### Waiting for something
+Then, to wait for a number of signals, call the `waitForSignals` function and hand over the desired number of signals to wait for:
 
-Maybe you want to wait for three requests to your api and then do something:
+```javascript
+const collector = waitForSignals({ count: 3 });
+```
+
+To notify the collector of a signal, use its `signal` function:
+
+```javascript
+await collector.signal();
+```
+
+Finally, to wait until all signals have occured, wait for the collector's `promise` property to resolve:
+
+```javascript
+await collector.promise;
+```
+
+E.g., if you want to wait for three requests being sent to your API and then do something, you may use the following code:
 
 ```javascript
 const collector = waitForSignals({ count: 3 });
 
 app.get('/', async (req, res) => {
-  await collector.sendSignal();
+  await collector.signal();
 
   res.status(200).end();
 });
 
-collector.finish.then(() => {
-  // Now the collector has received three signals.
+collector.promise.then(() => {
+  // ...
 });
 ```
 
-All subsequent API calls will increase a counter within the `collector`, but
-apart from that nothing will happen.
+All subsequent API calls will increase a counter within the `collector`, but apart from that nothing will happen.
 
 ## Running the build
 
