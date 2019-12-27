@@ -1,7 +1,7 @@
 import { assert } from 'assertthat';
 import { waitForSignals } from '../../lib/waitForSignals';
 
-suite('wait for signals', (): void => {
+suite('waitForSignals', (): void => {
   test('resolves immediately if the number of signals is zero.', async (): Promise<void> => {
     const collector = waitForSignals({ count: 0 });
 
