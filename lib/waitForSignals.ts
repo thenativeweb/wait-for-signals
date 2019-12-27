@@ -1,11 +1,5 @@
-interface Collector {
-  sendSignal: () => Promise<void>;
-  fail: (reason?: Error) => Promise<void>;
-  finish: Promise<void>;
-}
+import { Collector } from './Collector';
 
-const waitForSignals = function ({ signals }: {
-  signals: number;
 const waitForSignals = function ({ count }: {
   count: number;
 }): Collector {
