@@ -5,7 +5,7 @@ suite('wait for signals', (): void => {
   test('resolves immediately if the number of signals is zero.', async (): Promise<void> => {
     const collector = waitForSignals({ count: 0 });
 
-    await collector.finish;
+    await collector.promise;
   });
 
   test('resolves after set number of signals has been sent.', async (): Promise<void> => {
@@ -13,7 +13,7 @@ suite('wait for signals', (): void => {
     let counter = 0;
 
     const done = new Promise(async (resolve): Promise<void> => {
-      await collector.finish;
+      await collector.promise;
 
       // The counter here must match the expected number of signals.
       assert.that(counter).is.equalTo(3);
@@ -38,7 +38,7 @@ suite('wait for signals', (): void => {
 
     await collector.fail(new Error('Foo'));
 
-    await assert.that(async (): Promise<void> => await collector.finish).is.throwingAsync('Foo');
+    await assert.that(async (): Promise<void> => await collector.promise).is.throwingAsync('Foo');
   });
 
   test('calling fail after the collector has finished does not do anything.', async (): Promise<void> => {
@@ -47,6 +47,6 @@ suite('wait for signals', (): void => {
     await collector.sendSignal();
     await collector.fail();
 
-    await assert.that(async (): Promise<void> => await collector.finish).is.not.throwingAsync();
+    await assert.that(async (): Promise<void> => await collector.promise).is.not.throwingAsync();
   });
 });
