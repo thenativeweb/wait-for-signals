@@ -37,7 +37,7 @@ import { waitForSignals } from 'wait-for-signals';
 Maybe you want to wait for three requests to your api and then do something:
 
 ```javascript
-const collector = waitForSignals({ signals: 3 });
+const collector = waitForSignals({ count: 3 });
 
 app.get('/', async (req, res) => {
   await collector.sendSignal();

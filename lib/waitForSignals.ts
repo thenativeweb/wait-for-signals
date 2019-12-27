@@ -6,6 +6,8 @@ interface Collector {
 
 const waitForSignals = function ({ signals }: {
   signals: number;
+const waitForSignals = function ({ count }: {
+  count: number;
 }): Collector {
   let collectorReject: undefined | ((reason?: any) => void),
       collectorResolve: undefined | (() => void),
@@ -26,7 +28,7 @@ const waitForSignals = function ({ signals }: {
   const sendSignal = async function (): Promise<void> {
     counter += 1;
 
-    if (counter === signals) {
+    if (counter === count) {
       if (collectorResolve === undefined) {
         throw new Error('Invalid operation. The collector resolve function was undefined but should not have been.');
       }
@@ -41,7 +43,7 @@ const waitForSignals = function ({ signals }: {
     collectorReject(reason);
   };
 
-  if (signals === 0) {
+  if (count === 0) {
     if (collectorResolve === undefined) {
       throw new Error('Invalid operation. The collector resolve function was undefined but should not have been.');
     }

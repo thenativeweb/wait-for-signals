@@ -3,13 +3,13 @@ import { waitForSignals } from '../../lib/waitForSignals';
 
 suite('wait for signals', (): void => {
   test('resolves immediately if the number of signals is zero.', async (): Promise<void> => {
-    const collector = waitForSignals({ signals: 0 });
+    const collector = waitForSignals({ count: 0 });
 
     await collector.finish;
   });
 
   test('resolves after set number of signals has been sent.', async (): Promise<void> => {
-    const collector = waitForSignals({ signals: 3 });
+    const collector = waitForSignals({ count: 3 });
     let counter = 0;
 
     const done = new Promise(async (resolve): Promise<void> => {
@@ -34,7 +34,7 @@ suite('wait for signals', (): void => {
   });
 
   test('rejects if fail is called.', async (): Promise<void> => {
-    const collector = waitForSignals({ signals: 1 });
+    const collector = waitForSignals({ count: 1 });
 
     await collector.fail(new Error('Foo'));
 
@@ -42,7 +42,7 @@ suite('wait for signals', (): void => {
   });
 
   test('calling fail after the collector has finished does not do anything.', async (): Promise<void> => {
-    const collector = waitForSignals({ signals: 1 });
+    const collector = waitForSignals({ count: 1 });
 
     await collector.sendSignal();
     await collector.fail();
