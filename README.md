@@ -1,6 +1,6 @@
 # wait-for-signals
 
-A utility that creates a promise which resolves after a prespecified number of signals has been sent.
+wait-for-signals waits for a number of signals before resolving a promise.
 
 ## Status
 
@@ -20,7 +20,7 @@ $ npm install wait-for-signals
 
 ## Quick Start
 
-First you need to add a reference to wait-for-signals to your application.
+First you need to add a reference to wait-for-signals to your application:
 
 ```javascript
 const { waitForSignals } = require('wait-for-signals');
@@ -32,7 +32,7 @@ If you use TypeScript, use the following code instead:
 import { waitForSignals } from 'wait-for-signals';
 ```
 
-## Waiting for something
+### Waiting for something
 
 Maybe you want to wait for three requests to your api and then do something:
 
