@@ -22,13 +22,13 @@ suite('waitForSignals', (): void => {
     });
 
     counter += 1;
-    await collector.sendSignal();
+    await collector.signal();
 
     counter += 1;
-    await collector.sendSignal();
+    await collector.signal();
 
     counter += 1;
-    await collector.sendSignal();
+    await collector.signal();
 
     await done;
   });
@@ -44,7 +44,7 @@ suite('waitForSignals', (): void => {
   test('calling fail after the collector has finished does not do anything.', async (): Promise<void> => {
     const collector = waitForSignals({ count: 1 });
 
-    await collector.sendSignal();
+    await collector.signal();
     await collector.fail();
 
     await assert.that(async (): Promise<void> => await collector.promise).is.not.throwingAsync();

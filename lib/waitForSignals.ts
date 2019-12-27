@@ -12,7 +12,7 @@ const waitForSignals = function ({ count }: {
     collectorResolve = resolve;
   });
 
-  const sendSignal = async function (): Promise<void> {
+  const signal = async function (): Promise<void> {
     counter += 1;
 
     if (counter !== count) {
@@ -40,7 +40,7 @@ const waitForSignals = function ({ count }: {
   }
 
   return {
-    sendSignal,
+    signal,
     fail,
     promise
   };
