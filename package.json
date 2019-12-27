@@ -1,0 +1,29 @@
+{
+  "name": "wait-for-signals",
+  "version": "5.1.0",
+  "description": "wait-for-signals resolves a promise after signals were received.",
+  "contributors": [
+    {
+      "name": "Golo Roden",
+      "email": "golo.roden@thenativeweb.io"
+    },
+    {
+      "name": "Hannes Leutloff",
+      "email": "hannes.leutloff@thenativeweb.io"
+    }
+  ],
+  "main": "build/lib/waitForSignals.js",
+  "types": "build/lib/waitForSignals.d.ts",
+  "dependencies": {},
+  "devDependencies": {
+    "assertthat": "5.1.0",
+    "roboter": "10.1.8",
+    "semantic-release-configuration": "1.0.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thenativeweb/wait-for-signals.git"
+  },
+  "keywords": [],
+  "license": "MIT"
+}
