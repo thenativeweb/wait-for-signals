@@ -7,17 +7,10 @@ const waitForSignals = function ({ count }: {
       collectorResolve: undefined | (() => void),
       counter = 0;
 
-  // We do not want to make this function async, so that the IIFE is executed
-  // directly and not on the event loop. This will call the promise callback
-  // immediately and the `collectorResolve` function will be set afterwards.
-  /* eslint-disable @typescript-eslint/promise-function-async */
-  const promise = (function (): Promise<void> {
-    return new Promise((resolve, reject): void => {
-      collectorReject = reject;
-      collectorResolve = resolve;
-    });
-  })();
-  /* eslint-enable @typescript-eslint/promise-function-async */
+  const promise: Promise<void> = new Promise((resolve, reject): void => {
+    collectorReject = reject;
+    collectorResolve = resolve;
+  });
 
   const sendSignal = async function (): Promise<void> {
     counter += 1;
