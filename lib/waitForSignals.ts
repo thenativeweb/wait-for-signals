@@ -15,12 +15,14 @@ const waitForSignals = function ({ count }: {
   const sendSignal = async function (): Promise<void> {
     counter += 1;
 
-    if (counter === count) {
-      if (collectorResolve === undefined) {
-        throw new Error('Invalid operation. The collector resolve function was undefined but should not have been.');
-      }
-      collectorResolve();
+    if (counter !== count) {
+      return;
     }
+
+    if (collectorResolve === undefined) {
+      throw new Error('Invalid operation. The collector resolve function was undefined but should not have been.');
+    }
+    collectorResolve();
   };
 
   const fail = async function (reason?: Error): Promise<void> {
