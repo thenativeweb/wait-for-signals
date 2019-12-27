@@ -1,7 +1,7 @@
 {
   "name": "wait-for-signals",
   "version": "5.1.0",
-  "description": "wait-for-signals resolves a promise after signals were received.",
+  "description": "wait-for-signals waits for a number of signals before resolving a promise.",
   "contributors": [
     {
       "name": "Golo Roden",
