@@ -68,18 +68,20 @@ collector.promise.then(() => {
 
 All subsequent API calls will increase a counter within the `collector`, but apart from that nothing will happen.
 
-You can always retrieve the current counter value by calling `getCount`:
+### Getting the counter value
+
+To get the current counter value use the `getCount` function:
 
 ```javascript
 const collector = waitForSignals({ count: 3 });
 
 console.log({ count: collector.getCount() });
-// 0
+// => 0
 
 await collector.signal();
 
 console.log({ count: collector.getCount() });
-// 1
+// => 1
 ```
 
 ## Running the build
