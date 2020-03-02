@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/thenativeweb/wait-for-signals/compare/1.0.0...1.1.0) (2020-03-02)
+
+
+### Features
+
+* Implement getCount() ([#59](https://github.com/thenativeweb/wait-for-signals/issues/59)) ([70e44f7](https://github.com/thenativeweb/wait-for-signals/commit/70e44f719471e052d21d7fc2c86f8584d47fadb4))
+
 # 1.0.0 (2019-12-27)
 
 

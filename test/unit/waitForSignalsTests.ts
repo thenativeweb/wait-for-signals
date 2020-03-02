@@ -49,4 +49,22 @@ suite('waitForSignals', (): void => {
 
     await assert.that(async (): Promise<void> => await collector.promise).is.not.throwingAsync();
   });
+
+  test('getCount returns the current count of received signals.', async (): Promise<void> => {
+    const collector = waitForSignals({ count: 2 });
+
+    assert.that(collector.getCount()).is.equalTo(0);
+
+    await collector.signal();
+
+    assert.that(collector.getCount()).is.equalTo(1);
+
+    await collector.signal();
+
+    assert.that(collector.getCount()).is.equalTo(2);
+
+    await collector.signal();
+
+    assert.that(collector.getCount()).is.equalTo(3);
+  });
 });

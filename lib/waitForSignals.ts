@@ -32,6 +32,10 @@ const waitForSignals = function ({ count }: {
     collectorReject(reason);
   };
 
+  const getCount = function (): number {
+    return counter;
+  };
+
   if (count === 0) {
     if (collectorResolve === undefined) {
       throw new Error('Invalid operation. The collector resolve function was undefined but should not have been.');
@@ -42,7 +46,8 @@ const waitForSignals = function ({ count }: {
   return {
     signal,
     fail,
-    promise
+    promise,
+    getCount
   };
 };
 
