@@ -25,7 +25,7 @@ const waitForSignals = function ({ count }: {
     collectorResolve();
   };
 
-  const fail = async function (reason?: Error): Promise<void> {
+  const fail = async function (reason?: Error | unknown): Promise<void> {
     if (collectorReject === undefined) {
       throw new Error('Invalid operation. The collector reject function was undefined but should not have been.');
     }
@@ -51,6 +51,4 @@ const waitForSignals = function ({ count }: {
   };
 };
 
-export {
-  waitForSignals
-};
+export { waitForSignals };
