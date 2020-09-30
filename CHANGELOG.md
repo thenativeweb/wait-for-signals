@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/thenativeweb/wait-for-signals/compare/1.1.0...1.2.0) (2020-09-30)
+
+
+### Features
+
+* Allow unknown as type for errors. ([f926ce8](https://github.com/thenativeweb/wait-for-signals/commit/f926ce8192043d49cff06eab27acde568038c7d9))
+
 # [1.1.0](https://github.com/thenativeweb/wait-for-signals/compare/1.0.0...1.1.0) (2020-03-02)
 
 
