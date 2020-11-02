@@ -84,7 +84,7 @@ console.log({ count: collector.getCount() });
 // => 1
 ```
 
-## Running the build
+## Running the quality assurance
 
 To build this module use [roboter](https://www.npmjs.com/package/roboter).
 
