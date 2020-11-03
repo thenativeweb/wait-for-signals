@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/thenativeweb/wait-for-signals/compare/1.2.0...1.2.1) (2020-11-03)
+
+
+### Bug Fixes
+
+* Fix headline for robot section in readme. ([#136](https://github.com/thenativeweb/wait-for-signals/issues/136)) ([915c80e](https://github.com/thenativeweb/wait-for-signals/commit/915c80e720adf92f4b314c35cd0a7468d76134bf))
+
 # [1.2.0](https://github.com/thenativeweb/wait-for-signals/compare/1.1.0...1.2.0) (2020-09-30)
 
 
