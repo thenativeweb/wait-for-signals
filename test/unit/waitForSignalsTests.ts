@@ -12,7 +12,7 @@ suite('waitForSignals', (): void => {
     const collector = waitForSignals({ count: 3 });
     let counter = 0;
 
-    const done = new Promise(async (resolve): Promise<void> => {
+    const done = new Promise<void>(async (resolve): Promise<void> => {
       await collector.promise;
 
       // The counter here must match the expected number of signals.
