@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/thenativeweb/wait-for-signals/compare/1.2.1...1.2.2) (2021-03-25)
+
+
+### Bug Fixes
+
+* Migrate from master to main. ([#218](https://github.com/thenativeweb/wait-for-signals/issues/218)) ([1653726](https://github.com/thenativeweb/wait-for-signals/commit/1653726d30f8289da96df00157c4cda4033a5356))
+
 ## [1.2.1](https://github.com/thenativeweb/wait-for-signals/compare/1.2.0...1.2.1) (2020-11-03)
 
 
