@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/thenativeweb/wait-for-signals/compare/1.2.2...1.2.3) (2021-05-12)
+
+
+### Bug Fixes
+
+* bump hosted-git-info from 2.8.8 to 2.8.9 ([#234](https://github.com/thenativeweb/wait-for-signals/issues/234)) ([fcb735e](https://github.com/thenativeweb/wait-for-signals/commit/fcb735e79eda58cc706443a6966ef55405fe0e11))
+
 ## [1.2.2](https://github.com/thenativeweb/wait-for-signals/compare/1.2.1...1.2.2) (2021-03-25)
 
 
