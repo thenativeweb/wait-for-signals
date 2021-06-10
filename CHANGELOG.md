@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/thenativeweb/wait-for-signals/compare/1.2.3...1.2.4) (2021-06-10)
+
+
+### Bug Fixes
+
+* bump trim-newlines from 3.0.0 to 3.0.1 ([#245](https://github.com/thenativeweb/wait-for-signals/issues/245)) ([4951aa4](https://github.com/thenativeweb/wait-for-signals/commit/4951aa46c9b80fffdb1d966b6286fabbd5955271))
+
 ## [1.2.3](https://github.com/thenativeweb/wait-for-signals/compare/1.2.2...1.2.3) (2021-05-12)
 
 
