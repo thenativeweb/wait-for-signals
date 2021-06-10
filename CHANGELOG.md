@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/thenativeweb/wait-for-signals/compare/1.2.4...1.2.5) (2021-06-10)
+
+
+### Bug Fixes
+
+* bump glob-parent from 5.1.1 to 5.1.2 ([#246](https://github.com/thenativeweb/wait-for-signals/issues/246)) ([43a322c](https://github.com/thenativeweb/wait-for-signals/commit/43a322c0e0c69997668460d7af0db9eb488f6492))
+
 ## [1.2.4](https://github.com/thenativeweb/wait-for-signals/compare/1.2.3...1.2.4) (2021-06-10)
 
 
