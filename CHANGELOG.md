@@ -1,3 +1,10 @@
+## [1.2.6](https://github.com/thenativeweb/wait-for-signals/compare/1.2.5...1.2.6) (2021-06-10)
+
+
+### Bug Fixes
+
+* bump normalize-url from 6.0.0 to 6.0.1 ([#244](https://github.com/thenativeweb/wait-for-signals/issues/244)) ([df59fda](https://github.com/thenativeweb/wait-for-signals/commit/df59fda27f6a7d8a19693c794ff035ab965210d7))
+
 ## [1.2.5](https://github.com/thenativeweb/wait-for-signals/compare/1.2.4...1.2.5) (2021-06-10)
 
 
