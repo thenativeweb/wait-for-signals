@@ -1,3 +1,10 @@
+## [1.2.7](https://github.com/thenativeweb/wait-for-signals/compare/1.2.6...1.2.7) (2021-08-15)
+
+
+### Bug Fixes
+
+* bump path-parse from 1.0.6 to 1.0.7 ([#258](https://github.com/thenativeweb/wait-for-signals/issues/258)) ([20e7922](https://github.com/thenativeweb/wait-for-signals/commit/20e7922f72886eea0c7eff5dd4131d0bec7e4fc5))
+
 ## [1.2.6](https://github.com/thenativeweb/wait-for-signals/compare/1.2.5...1.2.6) (2021-06-10)
 
 
